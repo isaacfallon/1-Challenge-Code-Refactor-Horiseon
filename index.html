@@ -2,15 +2,23 @@
 <html lang="en-us">
 
 <head>
-    <meta charset="UTF-8" />
+    <!-- The meta tag does not need a closing tag so it has been removed. -->
+    <meta charset="UTF-8">
+
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>website</title>
+
+    <!-- Updated the title tag to reflect the website information to the user and assist with SEO. -->
+    <title>Horiseon Marketing Agency</title>
+
 </head>
 
 <body>
-    <div class="header">
-        <h1>Hori<span class="seo">seo</span>n</h1>
-        <div>
+<!-- Updated the header tag to include the h1 and nav tags since they occupy the same horizontal space at the very top of the page. -->
+    <header>
+        <h1>Horiseon</h1>
+        <nav>
+        <!-- Previously, the navigation elements at the top right of the page were part of a 'div' tag. 
+        The code has been updated to bring the elements into a semantic 'nav' tag for readability and accessibility. -->
             <ul>
                 <li>
                     <a href="#search-engine-optimization">Search Engine Optimization</a>
@@ -22,61 +30,65 @@
                     <a href="#social-media-marketing">Social Media Marketing</a>
                 </li>
             </ul>
-        </div>
-    </div>
-    <div class="hero"></div>
-    <div class="content">
-        <div class="search-engine-optimization">
-            <img src="./assets/images/search-engine-optimization.jpg" class="float-left" />
-            <h2>Search Engine Optimization</h2>
-            <p>
-                The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.
-            </p>
-        </div>
-        <div id="online-reputation-management" class="online-reputation-management">
-            <img src="./assets/images/online-reputation-management.jpg" class="float-right" />
-            <h2>Online Reputation Management</h2>
-            <p>
-                The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.
-            </p>
-        </div>
-        <div id="social-media-marketing" class="social-media-marketing">
-            <img src="./assets/images/social-media-marketing.jpg" class="float-left" />
-            <h2>Social Media Marketing</h2>
-            <p>
-                Social media continues to have a sizable influence on buying habits. Social media marketing helps you determine which platforms are suited to your brand, using analytics to find the right markets and increase your lead generation.
-            </p>
-        </div>
-    </div>
-    <div class="benefits">
-        <div class="benefit-lead">
-            <h3>Lead Generation</h3>
-            <img src="./assets/images/lead-generation.png" />
-            <p>
-                Inbound strategies for lead generation require less work for your business, bringing customers directly to your website.
-            </p>
-        </div>
-        <div class="benefit-brand">
-            <h3>Brand Awareness</h3>
-            <img src="./assets/images/brand-awareness.png" />
-            <p>
-                Users find your business through paid and organic searches, increasing the search ranking and visibility for your business.
-            </p>
-        </div>
-        <div class="benefit-cost">
-            <h3>Cost Management</h3>
-            <img src="./assets/images/cost-management.png"></img>
-            <p>
-                As the search ranking for your business increases, your advertising costs decrease, and you no longer need to advertise your page.
-            </p>
-        </div>
-    </div>
-    <div class="footer">
-        <h2>Made with ❤️️ by Horiseon</h2>
-        <p>
-            &copy; 2023 Horiseon Social Solution Services, Inc.
-        </p>
-    </div>
-</body>
+        </nav>
+    </header>
 
+    <div class="hero-image">
+    <!-- Changed this section containing the hero-image element to a div as it lacked a heading or any other defining content normally associated with a section. 
+    It also keeps the page consistent with the other div tags acting as parent elements for the sections within. -->
+        <img src="./assets/images/digital-marketing-meeting.jpg" alt="Image showing people in a meeting room having a discussion.">
+            <!-- Rather than only having a div tag contain the hero image, an img tag was added alongside the alt attribute for accessibility. -->
+    </div>
+    
+    <div class="main-content">
+    <!-- Updated the page structure so that div tags act as parent elements for the section tags within to contain the actual content.
+    The class name for these section tags have been tweaked to better define their roles on the site, resulting in better readability.    -->
+        <section id="search-engine-optimization">
+        <!-- Updated the class 'search engine optimization' to an ID to ensure the anchor tag/link work correctly and remain consistent with the rest of the sections below. -->
+            <img src="./assets/images/search-engine-optimization.jpg" alt="An image of a desktop with several stationary items spread out." class="float-left">
+            <!-- All img tags now include an alt attribute with a detailed explanation of what the image or graphic is. -->
+            <h2>Search Engine Optimization</h2>
+            <p>The dominance of mobile internet use means that users are searching for the right business as they travel, shop, or sit on their couch at home. Search Engine Optimization (SEO) allows you to increase your visibility and find the right customers for your business.</p>
+        </section>
+        <section id="online-reputation-management">
+        <!-- Removed redundant class tag with the same id tag name. The original CSS class element has been changed to an ID -->
+            <img src="./assets/images/online-reputation-management.jpg" alt="An image showing someone from behind working at a laptop with their phone out. The laptop shows a bar graph trending upwards with an arrow following diagonally up and right." class="float-right">
+            <h2>Online Reputation Management</h2>
+            <p>The web is full of opinions, and some of these can be negative. Social media allows anyone with an internet connection to say whatever they want about your business. Online Reputation Management gives you the control over what potential customers see when they search for your business.</p>
+        </section>
+        <section id="social-media-marketing">
+        <!-- Removed redundant class tag with the same id tag name. The original CSS class element has been changed to an ID -->
+            <img src="./assets/images/social-media-marketing.jpg" alt="An image showing a top down image of several people working at a desk collaboratively on a project." class="float-left">
+            <h2>Social Media Marketing</h2>
+            <p>Social media continues to have a sizable influence on buying habits. Social media marketing helps you determine which platforms are suited to your brand, using analytics to find the right markets and increase your lead generation.</p>
+        </section>
+    </div>
+
+    <div class="right-content">
+    <!-- The class name for these section tags have been tweaked to better define their roles on the site, resulting in better readability. -->
+        <section class="benefit-lead">
+            <h3>Lead Generation</h3>
+            <img src="./assets/images/lead-generation.png" alt="A graphic showing a cogwheel with an arrow below pointing down to a dollar sign.">
+            <!-- The img tag does not need a closing tag so it has been removed (including for all other img tags throughout). -->
+            <p>Inbound strategies for lead generation require less work for your business, bringing customers directly to your website.</p>
+        </section>
+        <section class="benefit-brand">
+            <h3>Brand Awareness</h3>
+            <img src="./assets/images/brand-awareness.png" alt="A graphic showing a lightbulb with waves radiating outwards in place of a head for a person wearing a suit.">
+            <p>Users find your business through paid and organic searches, increasing the search ranking and visibility for your business.</p>
+        </section>
+        <section class="benefit-cost">
+            <h3>Cost Management</h3>
+            <img src="./assets/images/cost-management.png" alt="A graphic showing a cogwheel in the background and three dollar signs in front in the foreground.">
+            <p>As the search ranking for your business increases, your advertising costs decrease, and you no longer need to advertise your page.</p>
+        </section>
+    </div>
+    
+    <footer>
+    <!-- Changed the div containing the footer elements to a semantic 'footer' tag for accessibility. -->
+        <h2>Made with ❤️️ by Horiseon</h2>
+        <p>&copy; 2023 Horiseon Social Solution Services, Inc.</p>
+    </footer>
+
+</body>
 </html>
