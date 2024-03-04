@@ -1,3 +1,7 @@
+/* Changes made to the overall structure of the CSS codebase to follow the semantic structure of the HTML elements. */
+
+/* Please see seperate comments for each element changed below to list specific changes made. */
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -6,6 +10,9 @@
 
 body {
     background-color: #d9dcd6;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* This font-family previously replicated throughout seperate elements has been added one time to the body tag to reduce repetition.
+    As the header and footer elements require different fonts, their respective font-family elements have been left as is. */
 }
 
 header {
@@ -14,24 +21,29 @@ header {
     background-color: #2a607c;
     color: #ffffff;
     display: flex;
+    /* Updated the header element to include a display attribute of 'flex'.
+    I utilised part of a solution found on StackOverflow to solve this problem of having the h1 and nav elements together sharing the same space within the header element.  
+    Please see my README.MD file attached to this repo for specifics on how I sourced this code and credits for the user who posted it.  */
+
+    /* Deleted all seperate header div elements as I combined them into the single 'header' element. */
 }
 
 h1 {
     display: inline-block;
     font-size: 48px;
     flex: 1;
+    /* This flex attribute for the h1 element was part of the solution found on StackOverflow as mentioned above.
+     Please see my README.MD file attached to this repo for specifics on how I sourced this code and credits for the user who posted it. */
 }
 
 nav {
     display: inline;
-    text-align: right;
-    flex: 1;
     padding-top: 15px;
     margin-right: 20px;
-    float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
+/* Combined the previously seperate div elements containing the navigation content into a single semantic nav element. */
 
 li {
     display: inline;
@@ -44,35 +56,10 @@ a {
 }
 
 a:hover {
-    color: black;
+    color: lightgrey;
 }
-
-.header h1 .seo {
-    color: #d9dcd6;
-}
-
-.header div {
-    padding-top: 15px;
-    margin-right: 20px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-}
-
-.header div ul {
-    list-style-type: none;
-}
-
-.header div ul li {
-    display: inline-block;
-    margin-left: 25px;
-}
-
-
-
-p {
-    font-size: 16px;
-}
+/* Added a simple a:hover element to increase reactivity of site and improve user experience.
+The colour of 'lightgrey' was chosen as the attribute to provide a subtle change while retaining readability. */
 
 .hero-image img {
     height: 50%;
@@ -80,6 +67,77 @@ p {
     margin-bottom: 25px;
     background-size: cover;
     background-position: center;
+}
+/* Rather than use a single div element to contain the hero-image, it has been changed so that an img tag with the hero image sits as a child element within the hero-image element. */
+
+.main-content {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+/* As mentioned in the HTML comments, the class name for these section tags have been tweaked to better define their roles on the site, resulting in better readability.  */
+
+#search-engine-optimization, #online-reputation-management, #social-media-marketing {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+/* Combined these three previously seperate class elements within the main-content section together to remove redundancy. */
+
+.main-content img {
+    max-height: 200px;
+}
+/* Combined all three previously seperate img elements for the class elements in the 'main-content' secion into one. */
+
+.main-content h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+/* Combined the three previously seperate h2 elements for the class elements in the 'main-content' secion into one. */
+
+p {
+    font-size: 16px;
+}
+
+.right-content {
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+    height: 100%; 
+    background-color: #2589bd;
+}
+
+.benefit-lead, .benefit-brand, .benefit-cost {
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+/* Combined these three previously seperate class elements within the right-content section together to remove redundancy. 
+I also increased the 'margin-bottom' attribute to 50px so the right content ends flush alongside the main content. */
+
+.right-content h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+/* Combined the three previously seperate h3 elements for the class elements in the 'right-content' secion into one. */
+
+.right-content img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+/* Combined all three previously seperate img elements for the class elements in the 'right-content' secion into one. */
+
+footer {
+    padding: 20px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    border-top: 2px solid black;
+    /* Added a top-border attribute to clearly differentiate the footer elements for the user. */
 }
 
 .float-left {
@@ -91,131 +149,5 @@ p {
     float: right;
     margin-left: 25px;
 }
-
-.main-content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.right-content {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%; 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
-}
-
-.benefit-lead {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-#search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-#online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-#social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-#search-engine-optimization img {
-    max-height: 200px;
-}
-
-#online-reputation-management img {
-    max-height: 200px;
-}
-
-#social-media-marketing img {
-    max-height: 175px;
-}
-
-#search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-#online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-#social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-footer {
-    padding: 20px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    border-top: 2px solid black;
-    /* Added a top-border attribute to clearly differentiate the footer elements for the user. */
-}
+/* Although the rest of the CSS codebase follows the semantic structure of the HTML elements, the float-right and float left classes have been moved to the bottom as they act as modifiers for other content.
+Additionally, they could be utilised for future updates to the site so having them at the bottom improves readability of the CSS codebase.  */
