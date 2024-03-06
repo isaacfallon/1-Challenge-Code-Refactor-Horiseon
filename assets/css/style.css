@@ -1,6 +1,6 @@
 /* Changes made to the overall structure of the CSS codebase to follow the semantic structure of the HTML elements. */
 
-/* Please see seperate comments for each element changed below to list specific changes made. */
+/* Please see separate comments for each element changed below to list specific changes made. */
 
 * {
     box-sizing: border-box;
@@ -10,22 +10,21 @@
 
 body {
     background-color: #d9dcd6;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    /* This font-family was previously duplicated throughout seperate classes and elements and has been added one time to the 'body' element.
+      /* This font-family attribute was previously duplicated throughout separate classes and elements and has been added one time to the 'body' element.
     As the header and footer elements require different font families, their respective font-family attributes have been left as is. */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* Updated the header element to include a 'display' attribute with a value of 'flex' and a 'justify-content' attribute with a value of 'flex-end'.
-    I utilised part of a solution found on StackOverflow to solve this issue of having the h1 and nav elements share the same space within the header element.  
-    Please see my README.MD file attached to this repo for specifics on how I sourced this code and credits for the user who posted it.  */
-
-/* All seperate header 'div' classes have been deleted and combined into this single 'header' element. */
+/* All separate header 'div' classes have been deleted and combined into this single 'header' element. */
 header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
     display: flex;
+    /* Updated the header element to include a 'display' attribute with a value of 'flex' and a 'justify-content' attribute with a value of 'flex-end'.
+    I utilised part of a solution found on StackOverflow to solve this issue of having the h1 and nav elements share the same space within the header element.  
+    Please see my README.MD file attached to this repo for specifics on how I sourced this code and credits for the user who posted it.  */
     justify-content: flex-end;
 }
 
@@ -38,7 +37,7 @@ h1 {
     margin-right: auto; 
 }
     
-/* Combined the previously seperate 'div' classes containing the navigation content into a single semantic' nav' element. */
+/* Combined the previously separate 'div' classes containing the navigation content into a single semantic' nav' element. */
 nav {
     display: inline;
     padding-top: 15px;
@@ -81,7 +80,7 @@ a:hover {
     margin-left: 20px;
 }
 
-/* These previously seperate classes have been combined into one to reduce repetition. */
+/* These previously separate classes have been combined into one to reduce repetition. */
 #search-engine-optimization, #online-reputation-management, #social-media-marketing {
     margin-bottom: 20px;
     padding: 50px;
@@ -90,12 +89,12 @@ a:hover {
     color: #ffffff;
 }
 
-/* The previously seperate 'img' elements have been combined into one within the 'main-content' class. */
+/* The previously separate 'img' elements have been combined into one within the 'main-content' class. */
 .main-content img {
     max-height: 200px;
 }
 
-/* The previously seperate 'h2' elements have been combined into one within the 'main-content' class. */
+/* The previously separate 'h2' elements have been combined into one within the 'main-content' class. */
 .main-content h2 {
     margin-bottom: 20px;
     font-size: 36px;
@@ -116,7 +115,7 @@ p {
     background-color: #2589bd;
 }
 
-/* These previously seperate classes have been combined into one to reduce repetition. */
+/* These previously separate classes have been combined into one to reduce repetition. */
 .benefit-lead, .benefit-brand, .benefit-cost {
     /* I also increased the 'margin-bottom' attribute to '50px' so the right-content ends flush alongside the main content.
     (PLEASE NOTE: this only works while the viewport is set to 100% as adding a @media screen query is outside the scope of this project. */
@@ -124,13 +123,13 @@ p {
     color: #ffffff;
 }
 
-/* The previously seperate 'h3' elements have been combined into one within the 'right-content' class. */
+/* The previously separate 'h3' elements have been combined into one within the 'right-content' class. */
 .right-content h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-/* The previously seperate 'img' elements have been combined into one within the 'right-content' class. */
+/* The previously separate 'img' elements have been combined into one within the 'right-content' class. */
 .right-content img {
     display: block;
     margin: 10px auto;
@@ -142,11 +141,9 @@ footer {
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    /* A 'border-top' attribute has been added to clearly differentiate the footer elements for the user. */
-    border-top: 2px solid black;
 }
 
-/* Although the rest of the CSS codebase follows the semantic structure of the HTML elements, the float-right and float left classes have been moved to the bottom as they act as modifiers for other content.
+/* As the rest of the CSS codebase follows the semantic structure of the HTML elements, the float-right and float left classes have been moved to the bottom as they act as modifiers for other content.
 Additionally, as they could be utilised for future updates to the site, having them at the bottom improves readability of the CSS codebase.  */
 .float-left {
     float: left;
