@@ -4,9 +4,9 @@
 
 This project is a code refractor task for the marketing agency Horiseon. It serves as the week 1 challenge for The University of Sydney's Coding Bootcamp.
 
-- The motivation for completing this project was to ensure that the codebase provided was cleaned up to be as accessible as possible for both future developers and users interacting with the page. 
+- My motivation for completing this project was to ensure that the codebase provided was cleaned up to be as accessible as possible for both future developers and users interacting with the page. 
 - This project was completed in order to fix several accessibility problems with the codebase as it was provided. 
-- The problem solved by refactoring the codebase is that the page is now accessible for developers who may need to alter the codebase in the future and for users accessing the page, especially if they require the assistance of a page reader. 
+- The problem solved by refactoring the codebase is that the page is now accessible for developers who may need to alter the codebase in the future and for users accessing the page, especially if they require assistive technologies such as video captions, screen readers, and braille keyboards.
 - My biggest learning from completing this project was understanding the importance of keeping other developers and the end user in mind when writing code. By staying in this frame of mind and thinking about how others would use my work, it resulted in a more accessible product and tool. 
 
 Below shows a screenshot of my completed webpage as it appears to the user accessing the website:
@@ -56,7 +56,7 @@ Please see a screenshot below showing these locations circled within the CSS cod
 
 ![Screenshot of styles.css codebase showing edited lines with snippets taken from Stack Overflow answer](assets/images/CSS_code_lines_highlighted_from_answer.png)
 
-The purpose of using this code was to ensure that the child elements with my header tag (h1 and nav) could use the same horizontal space but be aligned on opposite sides of the header space. 
+Utilising this code solved a problem I had where the child elements within the header tag (h1 and nav) were not aligned correctly within the same horizontal space. By adding the attribute of 'justify-content: flex end' to the parent header element and the adding 'margin-right: auto' to the h1 element, both pieces can sit correctly in the header element while now following proper HTML semantic flow.
 
 ## License
 
