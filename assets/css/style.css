@@ -117,9 +117,9 @@ p {
 
 /* These previously separate classes have been combined into one to reduce repetition. */
 .benefit-lead, .benefit-brand, .benefit-cost {
-    /* I also increased the 'margin-bottom' attribute to '50px' so the right-content ends flush alongside the main content.
-    (PLEASE NOTE: this only works while the viewport is set to 100% as adding a @media screen query is outside the scope of this project. */
-    margin-bottom: 50px;
+    /* I also increased the 'margin-bottom' attribute to '15%' so the right-content ends flush alongside the main content.
+    (PLEASE NOTE: this only works while the browser zoom is set to 100% as adding a @media screen query is outside the scope of this project. */
+    margin-bottom: 15%;
     color: #ffffff;
 }
 
